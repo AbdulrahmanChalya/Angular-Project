@@ -1,0 +1,60 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Charlie",
+      "petKind": "dog",
+      "age": 3,
+      "image": "charlie_dog.jpg",
+      "owner": "Patricia Johnson"
+    },
+    {
+      "id": 2,
+      "name": "FluffY",
+      "petKind": "cat",
+      "age": 2,
+      "image": "fluffy_cat.jpg",
+      "owner": "Patricia Johnson"
+    },
+    {
+      "id": 3,
+      "name": "Oscar",
+      "petKind": "cat",
+      "age": 6,
+      "image": "oscar_cat.jpg",
+      "owner": "Lisa Anderson"
+    },
+    {
+      "id": 4,
+      "name": "Tweety",
+      "petKind": "canary",
+      "age": 3,
+      "image": "tweety_canary.jpg",
+      "owner": "Kimberly Green"
+    },
+    {
+      "id": 5,
+      "name": "Riley",
+      "petKind": "dog",
+      "age": 5,
+      "image": "riley_dog.jpg",
+      "owner": "Brenda Clark"
+    },
+    {
+      "id": 6,
+      "name": "Sam",
+      "petKind": "rabbit",
+      "age": 2,
+      "image": "sam_rabbit.jpg",
+      "owner": "Brenda Clark"
+    },
+    {
+      "id": 7,
+      "name": "Marx",
+      "petKind": "hamster",
+      "age": 1,
+      "image": "marx_hamster.jpg",
+      "owner": "Kimberly Green"
+    }
+  ]
+}
