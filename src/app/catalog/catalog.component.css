@@ -1,0 +1,37 @@
+/* pet-catalog.css */
+.pet_catalog h2 {
+  color: #333;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.pet_catalog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pet_catalog td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.pet_catalog .thumb {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.pet_catalog .pet_kind,
+.pet_catalog .pet_age,
+.pet_catalog .pet_owner {
+  font-size: 14px;
+  color: #555;
+}
+
+.pet_catalog .no-pets {
+  text-align: center;
+  color: red;
+  font-size: 16px;
+}

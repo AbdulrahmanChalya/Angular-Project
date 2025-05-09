@@ -1,0 +1,35 @@
+/* pet-detail.css */
+.pet_detail .pet_name {
+  font-size: 24px;
+  color: #000;
+}
+
+.pet_detail .pet_kind,
+.pet_detail .pet_age {
+  font-size: 18px;
+  color: #666;
+}
+
+.pet_detail .pet_image {
+  width: 200px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pet_detail .message {
+  font-size: 16px;
+  color: #900;
+  text-align: center;
+}
+
+.pet_detail a {
+  text-decoration: none;
+  color: #007BFF;
+  font-size: 16px;
+}
+
+.data{
+  text-align: center;
+  margin-top: 10px;
+}

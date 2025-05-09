@@ -1,0 +1,22 @@
+<div class="pet_catalog">
+  <h2>Pet Catalog</h2>
+<ng-container *ngIf="pets | async as petList">
+  <table *ngIf="petList.length > 0; else noPets">
+    <tr *ngFor="let p of petList; trackBy: trackByPetId">
+      <td>
+        <a [routerLink]="['/pets', p.id]">
+          <img class="thumb" [src]="p.imgSrc" [alt]="p.name">
+        </a>
+      </td>
+      <td>
+        <span class="pet_kind">{{p.petKind}}</span>&nbsp;&nbsp;
+        <span class="pet_age">{{p.age}}</span><br>
+        <span class="pet_owner">{{p.owner}}</span><br>
+      </td>
+    </tr>
+  </table>
+</ng-container>
+<ng-template #noPets>
+  <p class="no-pets">No pets available at the moment.</p>
+</ng-template>
+</div>

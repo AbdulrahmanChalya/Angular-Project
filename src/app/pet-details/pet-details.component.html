@@ -1,0 +1,20 @@
+<div class="pet_detail">
+@if(pet !== undefined){
+  <p>
+    <img [src]='pet.imgSrc' [alt]='pet.name' class='pet_image'>
+  </p>
+  <p class="data">
+    Name : <span class="pet_name">{{pet.name}}</span><br>
+    Animal : <span class="pet_kind">{{pet.petKind}}</span><br>
+    Age : <span class="pet_age">{{pet.age}}</span><br>
+    Owner : <span class="pet_owner">{{pet.owner}}</span><br>
+  </p>
+}@else{
+  <p class="message">
+    The data is not found.
+  </p>
+}
+<p>
+  <a routerLink="/catalog">Pet Catalog</a>
+</p>
+</div>
