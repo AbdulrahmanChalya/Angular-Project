@@ -10,5 +10,5 @@ import {FooterComponent} from "./footer/footer.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Assignment3-Chalya';
+  title = 'Angular-Project';
 }

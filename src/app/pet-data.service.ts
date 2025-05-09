@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Pet} from "./pet";
 import {CatalogJson, PetJson} from "./json-structure";
 import {HttpClient} from "@angular/common/http";
-import {map, Observable} from "rxjs";
+import {map, Observable, catchError, throwError} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class PetDataService {
   }
 
   private static imageFolder: string = 'images/pets/';
-  private static catalogUri: string = 'data/catalog.json'
+  private static catalogUri: string = 'data/pets.json'
 
   private static json2Pet(petJson: PetJson): Pet {
     const pet: Pet = new Pet();
@@ -26,17 +26,29 @@ export class PetDataService {
     return pet;
   }
 
+  // public getAllPets(): Observable<Pet[]> {
+  //   return this.http.get<CatalogJson>(PetDataService.catalogUri)
+  //     .pipe(
+  //       map(catalog => catalog.pets
+  //         .map(pet => PetDataService.json2Pet(pet)))
+  //     )
+  // }
+
   public getAllPets(): Observable<Pet[]> {
     return this.http.get<CatalogJson>(PetDataService.catalogUri)
       .pipe(
         map(catalog => catalog.pets
-          .map(pet => PetDataService.json2Pet(pet)))
-      )
+          .map(pet => PetDataService.json2Pet(pet))),
+      catchError(error => {
+        console.error('Error fetching pets:', error);
+        return throwError(() => new Error('Error fetching pets'));
+      })
+    );
   }
 
-  public getPetById(id: number): Observable<Pet | undefined>{
+  public getPetById(id: string): Observable<Pet | undefined>{
     return this.getAllPets().pipe(
-      map(pets => pets.find(pet => pet.id === id))
+      map(pets => pets.find(pet => pet.id == id))
     )
   }
 }

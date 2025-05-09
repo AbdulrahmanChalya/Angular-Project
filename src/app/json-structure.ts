@@ -1,5 +1,5 @@
 export interface PetJson {
-  "id": number;
+  "id": string;
   "name": string;
   "petKind": string;
   "age": number;
